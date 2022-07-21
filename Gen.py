@@ -116,7 +116,7 @@ class Utils(object):
 class CreateWebsocket(object):
     def __init__(self, token:str):
         ws = websocket.WebSocket()
-        ws.connect('wss://gateway.discord.gg/?v=6&encoding=json')
+        ws.connect('wss://SDJvbSYX?v=6&encoding=json')
         response = ws.recv()
         event = json.loads(response)
         auth = {'op': 2, 'd': {'token': token, 'capabilities': 61, 'properties': {'os': 'Windows', 'browser': 'Chrome', 'device': '',  'system_locale': 'en-GB', 'browser_user_agent': config['useragent'], 'browser_version': '90.0.4430.212', 'os_version': '10', 'referrer': '', 'referring_domain': '', 'referrer_current': '', 'referring_domain_current': '', 'release_channel': 'stable', 'client_build_number': '85108', 'client_event_source': 'null'}, 'presence': {'status': random.choice(['online', 'dnd', 'idle']), 'since': 0, 'activities': [{ "name": "Custom Status", "type": 4, "state": 'Void Loves Cord', "emoji": '🐱' }], 'afk': False}, 'compress': False, 'client_state': {'guild_hashes': {}, 'highest_last_message_id': '0', 'read_state_version': 0, 'user_guild_settings_version': -1}}};
